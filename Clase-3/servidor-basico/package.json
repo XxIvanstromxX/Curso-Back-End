@@ -1,0 +1,16 @@
+{
+  "name": "servidor-basico",
+  "version": "1.0.0",
+  "description": "Este es un servidor basico con node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Node",
+    "server",
+    "js"
+  ],
+  "author": "Ivan Martinez",
+  "license": "ISC"
+}
