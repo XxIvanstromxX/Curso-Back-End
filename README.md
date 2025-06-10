@@ -21,14 +21,53 @@ Este repositorio contiene el material del curso de desarrollo web backend para C
   - `Clase-2/objetosYArreglos.js` - Trabajo con objetos y arrays
   - `Clase-2/actividades/` - Ejercicios prácticos
 
+### Clase 3: Node.js y Programación Asíncrona
+- **Módulos y Temas:**
+
+#### 📁 File System Module
+- **Callbacks:**
+  - `Clase-3/files_Module/callbacks/readFIle.js` - Lectura de archivos con callbacks
+  - `Clase-3/files_Module/callbacks/create.js` - Creación de archivos
+  - `Clase-3/files_Module/callbacks/deleteFile.js` - Eliminación de archivos
+- **Promises:**
+  - `Clase-3/files_Module/promises/readFile.js` - Lectura de archivos con promesas
+  - `Clase-3/files_Module/promises/createFile.js` - Creación de archivos con async/await
+  - `Clase-3/files_Module/promises/deleteFile.js` - Eliminación de archivos con promesas
+
+#### 🔄 Recorrido de Arrays
+- **Archivos:**
+  - `Clase-3/Recorrer-Arrays/forClasico.js` - Bucle for tradicional
+  - `Clase-3/Recorrer-Arrays/forEach.js` - Método forEach para arrays
+  - `Clase-3/Recorrer-Arrays/Actividad.js` - Ejercicios prácticos
+
+#### 🌐 Servidor Básico
+- **Archivos:**
+  - `Clase-3/servidor-basico/index.js` - Servidor HTTP básico con Node.js
+  - `Clase-3/servidor-basico/package.json` - Configuración del proyecto
+- **Temas:**
+  - Creación de servidor HTTP
+  - Manejo de rutas básicas
+  - Métodos HTTP (GET, POST)
+
 ## 🚀 Cómo usar este repositorio
 
-1. Clona el repositorio en tu máquina local
-2. Navega a la carpeta de cada clase
-3. Ejecuta los archivos JavaScript con Node.js:
+1. **Clona el repositorio** en tu máquina local
+2. **Navega a la carpeta** de cada clase
+3. **Ejecuta los archivos JavaScript** con Node.js:
    ```bash
    node nombre-del-archivo.js
    ```
+
+### Para el Servidor Básico (Clase 3):
+1. Navega a la carpeta del servidor:
+   ```bash
+   cd Clase-3/servidor-basico
+   ```
+2. Ejecuta el servidor:
+   ```bash
+   node index.js
+   ```
+3. Abre tu navegador en `http://localhost:3000`
 
 ## 📚 Prerrequisitos
 
@@ -40,7 +79,11 @@ Este repositorio contiene el material del curso de desarrollo web backend para C
 
 - Comprender los fundamentos de JavaScript para backend
 - Aprender estructuras de control y programación
-- Desarrollar habilidades prácticas de programación
+- Dominar el sistema de archivos de Node.js (File System)
+- Entender programación asíncrona (callbacks y promesas)
+- Manejar diferentes métodos de iteración en arrays
+- Crear servidores HTTP básicos con Node.js
+- Desarrollar habilidades prácticas de programación backend
 - Preparar las bases para tecnologías backend avanzadas
 
 ## 📧 Contacto
