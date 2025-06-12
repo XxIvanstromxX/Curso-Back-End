@@ -1,11 +1,11 @@
 const express = require("express");
-const app = express(); //Creando una instancia para express
+const app = express(); //Creando una instancia para express (creamos la aplicacion)
 
 const PORT = 3000;
 const HOST = "localhost";
 
-app.use(express.json()); // Esto es equivalente a la logica de res.on(data) y req.on(end)
-app.use(express.urlencoded({ extended: true }));
+//Middleware para parsear el cuerpo de la peticion (body) en formato JSON
+app.use(express.json()); // Esto es equivalente a la logica de res.on(data) y req.on(end) esto es una forma de decirle a express que vamos a recibir datos en formato JSON en el cuerpo de la peticion (body) y que los vamos a poder acceder directamente con req.body
 
 //Ruta raiz acceder con metodo get
 app.get("/", (req, res) => {
@@ -49,8 +49,9 @@ app.use((req, res) => {
   console.log(`Se accedio a la ruta ${req.url} con el metodo ${res.method}`);
   const body = "404 - Recurso no encontrado en Express";
   res.status(404).send(body);
-});
+}); // Middleware para manejar rutas no encontradas (404) en Express
 
+//Iniciar el servidor
 app.listen(PORT, HOST, () => {
   console.log(`El servidor se esta ejecutando en: http://${HOST}:${PORT}`);
 });
