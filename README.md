@@ -49,8 +49,33 @@ Este repositorio contiene el material del curso de desarrollo web backend para C
   - Manejo de rutas básicas
   - Métodos HTTP (GET, POST)
 
+### Clase 4: Servidores Web Avanzados
+- **Módulos y Temas:**
+
+#### 🔧 HTTP Module (Node.js Nativo)
+- **Archivos:**
+  - `Clase-4/http_Module/index.js` - Servidor HTTP avanzado con enrutamiento
+  - `Clase-4/http_Module/package.json` - Configuración del proyecto
+- **Temas:**
+  - Manejo avanzado de rutas
+  - Diferentes tipos de respuesta (HTML, JSON, texto)
+  - Métodos HTTP (GET, POST) con validación
+
+#### ⚡ Express.js Framework
+- **Archivos:**
+  - `Clase-4/Express/app.js` - API REST con Express.js
+  - `Clase-4/Express/package.json` - Dependencias y scripts
+- **Temas:**
+  - Introducción a Express.js
+  - Middleware para parsing JSON
+  - Rutas GET y POST
+  - Manejo de parámetros del cuerpo (req.body)
+  - Respuestas JSON y HTML
+  - Manejo de errores 404
+
 ## 🚀 Cómo usar este repositorio
 
+### **Clases 1-2: Archivos JavaScript básicos**
 1. **Clona el repositorio** en tu máquina local
 2. **Navega a la carpeta** de cada clase
 3. **Ejecuta los archivos JavaScript** con Node.js:
@@ -58,7 +83,7 @@ Este repositorio contiene el material del curso de desarrollo web backend para C
    node nombre-del-archivo.js
    ```
 
-### Para el Servidor Básico (Clase 3):
+### **Clase 3: Servidor Básico**
 1. Navega a la carpeta del servidor:
    ```bash
    cd Clase-3/servidor-basico
@@ -69,22 +94,68 @@ Este repositorio contiene el material del curso de desarrollo web backend para C
    ```
 3. Abre tu navegador en `http://localhost:3000`
 
+### **Clase 4: Servidores Avanzados**
+
+#### Para HTTP Module:
+1. Navega a la carpeta:
+   ```bash
+   cd Clase-4/http_Module
+   ```
+2. Instala dependencias (si es necesario):
+   ```bash
+   npm install
+   ```
+3. Ejecuta el servidor:
+   ```bash
+   node index.js
+   ```
+
+#### Para Express.js:
+1. Navega a la carpeta:
+   ```bash
+   cd Clase-4/Express
+   ```
+2. Instala dependencias:
+   ```bash
+   npm install
+   ```
+3. Ejecuta el servidor:
+   ```bash
+   npm start
+   ```
+   O alternativamente:
+   ```bash
+   node app.js
+   ```
+4. Abre tu navegador en `http://localhost:3000`
+
 ## 📚 Prerrequisitos
 
-- Node.js instalado en tu sistema
-- Editor de código (VS Code recomendado)
-- Conocimientos básicos de programación
+### **Software Requerido:**
+- **Node.js** (versión 14 o superior) instalado en tu sistema
+- **npm** (viene incluido con Node.js)
+- **Editor de código** (VS Code recomendado)
+
+### **Conocimientos:**
+- Conceptos básicos de programación
+- Fundamentos de JavaScript
+- Conocimiento básico de terminal/línea de comandos
+
+### **Dependencias del Proyecto:**
+- **Express.js** - Framework web para Node.js
+- **Nodemon** - Herramienta de desarrollo para reinicio automático
 
 ## 🎯 Objetivos del Curso
 
-- Comprender los fundamentos de JavaScript para backend
-- Aprender estructuras de control y programación
-- Dominar el sistema de archivos de Node.js (File System)
-- Entender programación asíncrona (callbacks y promesas)
-- Manejar diferentes métodos de iteración en arrays
-- Crear servidores HTTP básicos con Node.js
-- Desarrollar habilidades prácticas de programación backend
-- Preparar las bases para tecnologías backend avanzadas
+- **Fundamentos:** Comprender los básicos de JavaScript para backend
+- **Estructuras:** Dominar estructuras de control y programación
+- **Node.js:** Manejar el sistema de archivos y programación asíncrona
+- **Servidores:** Crear servidores HTTP nativos con Node.js
+- **Express.js:** Desarrollar APIs REST con el framework Express
+- **HTTP:** Entender métodos HTTP, rutas y manejo de datos
+- **Middleware:** Implementar middleware para parsing y validación
+- **Backend:** Desarrollar habilidades completas de programación backend
+- **Preparación:** Establecer bases sólidas para tecnologías avanzadas
 
 ## 📧 Contacto
 
