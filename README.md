@@ -41,6 +41,13 @@ Repositorio del curso de desarrollo web backend para CCOL. Material práctico pa
 - **Validación de datos** y manejo de errores
 - **Base de datos simulada** con `datos.json`
 
+### 🗄️ Clase 6: Base de Datos MongoDB
+**CRUD con MongoDB y Mongoose**
+- **MongoDB Atlas:** Conexión a base de datos en la nube
+- **Mongoose ODM:** Object Document Mapper para MongoDB
+- **Esquemas y validaciones:** Modelos con restricciones avanzadas
+- **Arquitectura modular:** Separación en config/ y models/sitorio del curso de desarrollo web backend para CCOL. Material práctico para aprender los fundamentos del desarrollo backend con JavaScript y Node.js.
+
 ## 🚀 Guía de Uso Rápida
 
 ### Clases 1-2: JavaScript Básico
@@ -76,6 +83,13 @@ npm install && npm start
 # CRUD Avanzado (con persistencia)
 cd Clase-5/CRUD-AVANZADO
 npm install && npm start
+```
+
+### Clase 6: MongoDB y Mongoose
+```bash
+cd Clase-6
+npm install && npm start
+# Configura tu URI de MongoDB en config/db.js
 ```
 
 **Endpoints CRUD disponibles:**
