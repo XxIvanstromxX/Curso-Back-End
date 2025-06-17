@@ -24,7 +24,7 @@ app.use((req, res, next) => {
 //Endpoint para lectura (R crud) y se hace con el metodo get
 app.get("/productos", async (req, res) => {
   try {
-    const productos = await Producto.find();
+    const productos = await Producto.find(); // Obtener todos los productos de la base de datos
     res.json(productos);
   } catch (error) {
     res.status(500).json({
@@ -39,13 +39,13 @@ app.post("/productos", async (req, res) => {
     // if(!req.body.nombre || !req.body.precio || !req.body.descripcion){
     //     res.status(400).json({mensaje: "No se puede completar el guardado revisa tus datos"})
     // }
-    const nuevoProducto = new Producto(req.body);
-    await nuevoProducto.save();
+    const nuevoProducto = new Producto(req.body); // Crear una instancia del modelo Producto con los datos del cuerpo de la petición
+    await nuevoProducto.save(); // Guardar el nuevo producto en la base de datos
     res
       .status(201)
       .json({ mensaje: "El producto se creo y guardo en la DB con exito" });
   } catch (error) {
-    res.status(400).json({ error: "error al crear el producto" });
+    res.status(400).json({ error: "error al crear el producto" }); // Manejo de errores si ocurre un problema al guardar el producto
   }
 });
 
@@ -55,11 +55,12 @@ app.put("/productos/:id", async (req, res) => {
     const productoActualizado = await Producto.findByIdAndUpdate(
       req.params.id,
       req.body
-    );
+    ); // Buscar el producto por ID y actualizarlo con los datos del cuerpo de la petición
+    // Si no se encuentra el producto, findByIdAndUpdate devuelve null
     if (!productoActualizado) {
       res.status(404).json({ error: "producto no encontrado" });
     }
-    res.json(productoActualizado);
+    res.json(productoActualizado); // Responder con el producto actualizado
   } catch (err) {
     res.status(400).json({ mensaje: "error al actualizar el producto" });
   }
