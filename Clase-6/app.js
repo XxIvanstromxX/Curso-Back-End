@@ -1,0 +1,71 @@
+//Importanto todos los modulos necesarios
+const express = require("express");
+const Producto = require("./models/producto");
+const conectDB = require("./config/db");
+const connectDB = require("./config/db");
+
+//Crear la instancia de express
+const app = express();
+const PORT = 3000;
+
+//Conectar a la base de datos
+connectDB();
+
+//Middleware para parsear cuerpos de la peticion en formato JSON
+app.use(express.json());
+//Middleware para saber en que ruta y con que etodo accedio un usario
+app.use((req, res, next) => {
+  console.log(
+    `el usuario accedio a la ruta ${req.url} y con el metodo ${req.method}`
+  );
+  next();
+});
+
+//Endpoint para lectura (R crud) y se hace con el metodo get
+app.get("/productos", async (req, res) => {
+  try {
+    const productos = await Producto.find();
+    res.json(productos);
+  } catch (error) {
+    res.status(500).json({
+      mensaje: "error al obtener los productos de la base de datos :C",
+    });
+  }
+});
+
+//Endpoint para escritura (C crud) y se hace con el metodo post
+app.post("/productos", async (req, res) => {
+  try {
+    // if(!req.body.nombre || !req.body.precio || !req.body.descripcion){
+    //     res.status(400).json({mensaje: "No se puede completar el guardado revisa tus datos"})
+    // }
+    const nuevoProducto = new Producto(req.body);
+    await nuevoProducto.save();
+    res
+      .status(201)
+      .json({ mensaje: "El producto se creo y guardo en la DB con exito" });
+  } catch (error) {
+    res.status(400).json({ error: "error al crear el producto" });
+  }
+});
+
+//Metodo PUT para actualizar un dato (U crud)
+app.put("/productos/:id", async (req, res) => {
+  try {
+    const productoActualizado = await Producto.findByIdAndUpdate(
+      req.params.id,
+      req.body
+    );
+    if (!productoActualizado) {
+      res.status(404).json({ error: "producto no encontrado" });
+    }
+    res.json(productoActualizado);
+  } catch (err) {
+    res.status(400).json({ mensaje: "error al actualizar el producto" });
+  }
+});
+
+//Inicializar el servidor
+app.listen(PORT, () => {
+  console.log(`Servidor escuchando en http://localhost:${PORT}`);
+});
