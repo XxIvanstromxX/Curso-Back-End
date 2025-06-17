@@ -1,0 +1,28 @@
+### Get obtener los datos de mi DB
+get http://localhost:3000/productos
+
+###POST para crear un elemento en mi base de datos
+post http://localhost:3000/productos
+Content-Type: application/json
+
+{
+    "nombre": "Samsung Galaxy s23",
+    "precio": "1000",
+    "descripcion": "Es un telefono de samsung de ultima generación"
+}
+
+###PUT para actualizar un elemento
+put http://localhost:3000/productos/6850ee6fad08193f486a0e0b
+Content-Type: application/json
+
+{
+    "precio": 400
+}
+
+###segundo put
+put http://localhost:3000/productos/6850e9a459557515e38867a8
+Content-Type: application/json
+
+{
+    "precio": 1500
+}
