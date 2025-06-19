@@ -15,3 +15,5 @@ Thumbs.db
 #Para evitar subir archivos de configuración de entorno
 .env
 
+#Para evitar subir archivos de package-lock.json
+package-lock.json
