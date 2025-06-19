@@ -1,7 +1,6 @@
 //Importanto todos los modulos necesarios
 const express = require("express");
 const Producto = require("./models/producto");
-const conectDB = require("./config/db");
 const connectDB = require("./config/db");
 
 //Crear la instancia de express
