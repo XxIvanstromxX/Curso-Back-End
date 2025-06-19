@@ -1,2 +1,17 @@
 #De esta forma eliminamos los node_modules
 node_modules 
+# De esta forma eliminamos los archivos de log
+logs
+*.log
+# De esta forma eliminamos los archivos de caché
+.cache
+# De esta forma eliminamos los archivos de configuración de IDEs
+.idea
+.vscode
+# De esta forma eliminamos los archivos de configuración de sistemas operativos
+.DS_Store
+Thumbs.db
+
+#Para evitar subir archivos de configuración de entorno
+.env
+
