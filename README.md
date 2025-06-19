@@ -46,7 +46,18 @@ Repositorio del curso de desarrollo web backend para CCOL. Material práctico pa
 - **MongoDB Atlas:** Conexión a base de datos en la nube
 - **Mongoose ODM:** Object Document Mapper para MongoDB
 - **Esquemas y validaciones:** Modelos con restricciones avanzadas
-- **Arquitectura modular:** Separación en config/ y models/sitorio del curso de desarrollo web backend para CCOL. Material práctico para aprender los fundamentos del desarrollo backend con JavaScript y Node.js.
+- **Arquitectura modular:** Separación en config/ y models/
+
+### 🏗️ Clase 7: Arquitectura MVC Completa
+**API RESTful con Patrón MVC y Middlewares Avanzados**
+- **Arquitectura MVC:** Separación completa en Models, Views y Controllers
+- **Middlewares avanzados:**
+  - **CORS:** Cross-Origin Resource Sharing para solicitudes entre dominios
+  - **Morgan:** Logger HTTP para registrar todas las solicitudes entrantes
+  - **Nodemon:** Auto-restart del servidor en desarrollo
+- **Rutas modulares:** Sistema de enrutamiento organizado por recursos
+- **Controladores:** Lógica de negocio separada del enrutamiento
+- **Manejo de errores:** Gestión centralizada de errores y respuestas 404
 
 ## 🚀 Guía de Uso Rápida
 
@@ -92,6 +103,15 @@ npm install && npm start
 # Configura tu URI de MongoDB en config/db.js
 ```
 
+### Clase 7: Arquitectura MVC Completa
+```bash
+cd Clase-7
+npm install && npm start
+# API REST con arquitectura MVC y middlewares avanzados
+# CORS habilitado para solicitudes cross-origin
+# Morgan logger activo para monitoreo de requests
+```
+
 **Endpoints CRUD disponibles:**
 - `GET /productos` - Listar todos
 - `POST /productos` - Crear nuevo
@@ -112,6 +132,7 @@ npm install && npm start
 ✅ **Express:** Framework web moderno  
 ✅ **CRUD:** Operaciones completas de datos  
 ✅ **APIs REST:** Desarrollo de servicios web  
+✅ **MVC:** Arquitectura de aplicaciones web  
 
 ---
 *Curso de Desarrollo Web Backend - CCOL*
