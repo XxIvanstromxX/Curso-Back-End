@@ -66,6 +66,20 @@ app.put("/productos/:id", async (req, res) => {
   }
 });
 
+//Metodo DELETE para eliminar un dato (D crud)
+app.delete("/productos/:id", async (req, res) => {
+  try {
+    const productoEliminado = await Producto.findByIdAndDelete(req.params.id); // Buscar el producto por ID y eliminarlo
+    // Si no se encuentra el producto, findByIdAndDelete devuelve null
+    if (!productoEliminado) {
+      res.status(404).json({ error: "producto no encontrado" });
+    }
+    res.json({ mensaje: "producto eliminado con exito" }); // Responder con un mensaje de éxito
+  } catch (err) {
+    res.status(400).json({ mensaje: "error al eliminar el producto" });
+  }
+});
+
 //Inicializar el servidor
 app.listen(PORT, () => {
   console.log(`Servidor escuchando en http://localhost:${PORT}`);
