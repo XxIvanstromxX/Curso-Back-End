@@ -1,0 +1,15 @@
+### Obtener todos los productos
+get http://localhost:3000/productos/
+
+### Crear un producto
+post http://localhost:3000/productos/
+Content-Type: application/json
+
+{
+  "nombre": "Audifonos Inalámbricos",
+  "precio": 100,
+  "descripcion": "Audifonos con cancelación de ruido"
+}
+
+### Actualizar un producto
+put http://localhost:3000/productos/1
