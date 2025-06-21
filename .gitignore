@@ -17,3 +17,6 @@ Thumbs.db
 
 #Para evitar subir archivos de package-lock.json
 package-lock.json
+
+# Para evitar subir peticiones http
+*.http
